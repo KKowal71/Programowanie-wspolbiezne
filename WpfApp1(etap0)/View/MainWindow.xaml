@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfApp1_etap0_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1_etap0_"
+        mc:Ignorable="d"
+        Title="kółko i krzyżyk" Height="600" Width="600">
+    <Grid x:Name="myGrid" Background="Brown">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding Word1}" FontSize="30" TextAlignment="Center" Background="CadetBlue" IsReadOnly="True"/>
+        <Button Grid.Row="0" Grid.Column="2" x:Name="restartButton"  Content="{Binding Word2}" Command="{Binding RestartCommand}" Background="DimGray"/>
+        <Button Grid.Row="1" Grid.Column="0" x:Name="b0b0" Command="{Binding PlayCommand}" CommandParameter="{Binding ElementName=b0b0}" FontSize="70" Margin="8"/>
+        <Button Grid.Row="1" Grid.Column="1" x:Name="b0b1" Command="{Binding PlayCommand}" CommandParameter="{Binding ElementName=b0b1}" FontSize="70" Margin="8"/>
+        <Button Grid.Row="1" Grid.Column="2" x:Name="b0b2" Command="{Binding PlayCommand}" CommandParameter="{Binding ElementName=b0b2}" FontSize="70" Margin="8"/>
+        <Button Grid.Row="2" Grid.Column="0" x:Name="b1b0" Command="{Binding PlayCommand}" CommandParameter="{Binding ElementName=b1b0}" FontSize="70" Margin="8"/>
+        <Button Grid.Row="2" Grid.Column="1" x:Name="b1b1" Command="{Binding PlayCommand}" CommandParameter="{Binding ElementName=b1b1}" FontSize="70" Margin="8"/>
+        <Button Grid.Row="2" Grid.Column="2" x:Name="b1b2" Command="{Binding PlayCommand}" CommandParameter="{Binding ElementName=b1b2}" FontSize="70" Margin="8"/>
+        <Button Grid.Row="3" Grid.Column="0" x:Name="b2b0" Command="{Binding PlayCommand}" CommandParameter="{Binding ElementName=b2b0}" FontSize="70" Margin="8"/>
+        <Button Grid.Row="3" Grid.Column="1" x:Name="b2b1" Command="{Binding PlayCommand}" CommandParameter="{Binding ElementName=b2b1}" FontSize="70" Margin="8"/>
+        <Button Grid.Row="3" Grid.Column="2" x:Name="b2b2" Command="{Binding PlayCommand}" CommandParameter="{Binding ElementName=b2b2}" FontSize="70" Margin="8"/>
+    </Grid>
+
+</Window>

@@ -1,0 +1,8 @@
+.vs/*
+obj
+App.xaml*
+AssemblyInfo.cs
+obj/
+Usings.cs
+bin/
+GameTests.csproj
